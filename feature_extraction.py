@@ -5,3 +5,8 @@ from sklearn.preprocessing import LabelEncoder
 
 # LOAD DATASET CSV
 df = pd.read_csv("dataset.csv")
+
+# LISTS TO STORE FEATURES AND LABELS
+X_mfcc = []
+X_mel = []
+y = []
