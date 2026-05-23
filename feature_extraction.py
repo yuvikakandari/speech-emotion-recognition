@@ -32,7 +32,7 @@ for index, row in df.iterrows():
             file_path,
             sr=SAMPLE_RATE
         )
-        
+
         # FIX AUDIO LENGTH
         if len(signal) > SAMPLES_PER_TRACK:
 
@@ -47,3 +47,7 @@ for index, row in df.iterrows():
                 (0, padding),
                 mode='constant'
             )
+
+        # NORMALIZE AUDIO
+        signal = librosa.util.normalize(signal)
+
