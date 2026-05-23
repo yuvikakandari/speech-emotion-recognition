@@ -62,3 +62,13 @@ for index, row in df.iterrows():
                 n_mfcc=40
             )
 
+             # MEL SPECTROGRAM EXTRACTION
+            mel = librosa.feature.melspectrogram(
+                y=augmented_signal,
+                sr=sr
+            )
+
+            mel_db = librosa.power_to_db(
+                mel,
+                ref=np.max
+            )
