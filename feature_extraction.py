@@ -17,3 +17,18 @@ SAMPLE_RATE = 22050
 DURATION = 3
 
 SAMPLES_PER_TRACK = SAMPLE_RATE * DURATION
+
+# PROCESS EACH AUDIO FILE
+for index, row in df.iterrows():
+
+    file_path = row["path"]
+
+    emotion = row["emotion"]
+
+    try:
+
+        # LOAD AUDIO
+        signal, sr = librosa.load(
+            file_path,
+            sr=SAMPLE_RATE
+        )
