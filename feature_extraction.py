@@ -51,3 +51,14 @@ for index, row in df.iterrows():
         # NORMALIZE AUDIO
         signal = librosa.util.normalize(signal)
 
+        # FEATURE EXTRACTION FOR EACH VERSION
+        for augmented_signal in augmented_signals:
+
+            # MFCC EXTRACTION
+
+            mfcc = librosa.feature.mfcc(
+                y=augmented_signal,
+                sr=sr,
+                n_mfcc=40
+            )
+
