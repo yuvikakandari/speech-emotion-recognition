@@ -32,3 +32,18 @@ for index, row in df.iterrows():
             file_path,
             sr=SAMPLE_RATE
         )
+        
+        # FIX AUDIO LENGTH
+        if len(signal) > SAMPLES_PER_TRACK:
+
+            signal = signal[:SAMPLES_PER_TRACK]
+
+        else:
+
+            padding = SAMPLES_PER_TRACK - len(signal)
+
+            signal = np.pad(
+                signal,
+                (0, padding),
+                mode='constant'
+            )
