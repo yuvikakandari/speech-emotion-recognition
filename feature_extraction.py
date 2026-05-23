@@ -10,3 +10,10 @@ df = pd.read_csv("dataset.csv")
 X_mfcc = []
 X_mel = []
 y = []
+
+# AUDIO SETTINGS
+SAMPLE_RATE = 22050
+
+DURATION = 3
+
+SAMPLES_PER_TRACK = SAMPLE_RATE * DURATION
