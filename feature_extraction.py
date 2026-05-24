@@ -92,3 +92,8 @@ X_mfcc = np.array(X_mfcc)
 X_mel = np.array(X_mel)
 
 y = np.array(y)
+
+# ENCODE LABELS
+encoder = LabelEncoder()
+
+y_encoded = encoder.fit_transform(y)
