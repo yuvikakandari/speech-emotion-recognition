@@ -112,3 +112,14 @@ print(y_encoded.shape)
 
 print("\nEmotion Classes:")
 print(encoder.classes_)
+
+# SAVE FEATURES
+# ---------------------------------------------------
+
+np.save("X_mfcc.npy", X_mfcc)
+
+np.save("X_mel.npy", X_mel)
+
+np.save("y.npy", y_encoded)
+
+print("\nFeatures Saved Successfully")
