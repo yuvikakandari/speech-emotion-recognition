@@ -72,3 +72,17 @@ for index, row in df.iterrows():
                 mel,
                 ref=np.max
             )
+
+            # STORE FEATURES
+            X_mfcc.append(mfcc)
+
+            X_mel.append(mel_db)
+
+            y.append(emotion)
+
+        print(f"Processed: {file_path}")
+
+    except Exception as e:
+
+        print(f"Error processing {file_path}: {e}")
+
