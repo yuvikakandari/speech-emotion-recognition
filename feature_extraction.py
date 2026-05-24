@@ -97,3 +97,18 @@ y = np.array(y)
 encoder = LabelEncoder()
 
 y_encoded = encoder.fit_transform(y)
+
+# DISPLAY FINAL SHAPES
+print("\nFeature Extraction Completed")
+
+print("\nMFCC Shape:")
+print(X_mfcc.shape)
+
+print("\nMel Spectrogram Shape:")
+print(X_mel.shape)
+
+print("\nLabels Shape:")
+print(y_encoded.shape)
+
+print("\nEmotion Classes:")
+print(encoder.classes_)
