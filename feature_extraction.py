@@ -52,19 +52,19 @@ for index, row in df.iterrows():
         signal = librosa.util.normalize(signal)
 
         # FEATURE EXTRACTION FOR EACH VERSION
-        for augmented_signal in augmented_signals:
+        for sig in signal:
 
             # MFCC EXTRACTION
 
             mfcc = librosa.feature.mfcc(
-                y=augmented_signal,
+                y=sig,
                 sr=sr,
                 n_mfcc=40
             )
 
              # MEL SPECTROGRAM EXTRACTION
             mel = librosa.feature.melspectrogram(
-                y=augmented_signal,
+                y=sig,
                 sr=sr
             )
 
@@ -114,8 +114,6 @@ print("\nEmotion Classes:")
 print(encoder.classes_)
 
 # SAVE FEATURES
-# ---------------------------------------------------
-
 np.save("X_mfcc.npy", X_mfcc)
 
 np.save("X_mel.npy", X_mel)
