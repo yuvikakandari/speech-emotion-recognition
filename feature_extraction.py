@@ -51,34 +51,31 @@ for index, row in df.iterrows():
         # NORMALIZE AUDIO
         signal = librosa.util.normalize(signal)
 
-        # FEATURE EXTRACTION FOR EACH VERSION
-        for sig in signal:
+    
+        # MFCC EXTRACTION
+        mfcc = librosa.feature.mfcc(
+            y=signal,
+            sr=sr,
+            n_mfcc=40
+        )
 
-            # MFCC EXTRACTION
+        # MEL SPECTROGRAM EXTRACTION
+        mel = librosa.feature.melspectrogram(
+            y=signal,
+            sr=sr
+        )
 
-            mfcc = librosa.feature.mfcc(
-                y=sig,
-                sr=sr,
-                n_mfcc=40
-            )
+        mel_db = librosa.power_to_db(
+            mel,
+            ref=np.max
+        )
 
-             # MEL SPECTROGRAM EXTRACTION
-            mel = librosa.feature.melspectrogram(
-                y=sig,
-                sr=sr
-            )
+        # STORE FEATURES
+        X_mfcc.append(mfcc)
 
-            mel_db = librosa.power_to_db(
-                mel,
-                ref=np.max
-            )
+        X_mel.append(mel_db)
 
-            # STORE FEATURES
-            X_mfcc.append(mfcc)
-
-            X_mel.append(mel_db)
-
-            y.append(emotion)
+        y.append(emotion)
 
         print(f"Processed: {file_path}")
 
