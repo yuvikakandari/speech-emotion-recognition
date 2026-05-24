@@ -86,3 +86,9 @@ for index, row in df.iterrows():
 
         print(f"Error processing {file_path}: {e}")
 
+# CONVERT TO NUMPY ARRAYS
+X_mfcc = np.array(X_mfcc)
+
+X_mel = np.array(X_mel)
+
+y = np.array(y)
