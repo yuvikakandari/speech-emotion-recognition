@@ -8,3 +8,9 @@ outputs/
 desktop.ini
 data/
 *.csv
+# Ignore NumPy binary data matrices
+*.npy
+
+# Ignore system/IDE configurations
+__pycache__/
+.ipynb_checkpoints/
