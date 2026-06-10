@@ -172,3 +172,9 @@ print(f"MFCC Frame Block Shape:         {X_mfcc.shape}")
 print(f"Delta Frame Block Shape:        {X_delta.shape}")
 print(f"Delta-Delta Frame Block Shape:  {X_deltadelta.shape}")
 print(f"Mel Spectrogram Block Shape:    {X_mel.shape}")
+
+
+#using 3 datasets now
+#3 basic data augmentation techniques
+#remove chroma
+#use delta mfcc, delta delta mfcc
