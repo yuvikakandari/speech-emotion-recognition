@@ -9,11 +9,14 @@ from funasr import AutoModel
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"🚀 Initializing Extraction Interface on target device: {device}")
 
-# 2. Download and load emotion2vec universal model weights via FunASR
-# This model converts raw speech waveforms directly into compact emotion matrices
+# =====================================================================
+# UPDATED ROBUST AUTOMODEL INITIALIZATION
+# =====================================================================
+# We use the explicit model key string and disable the remote update ping
 model = AutoModel(
     model="iic/emotion2vec_base_v2", 
-    model_revision="v2.0.4",
+    hub="ms",  # Explicitly forces ModelScope hub protocol
+    disable_update=True,  # Bypasses the slow update verification check
     device=device
 )
 
