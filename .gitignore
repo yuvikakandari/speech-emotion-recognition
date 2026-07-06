@@ -10,3 +10,6 @@ datasets/
 *.csv
 # Ignore NumPy binary data matrices
 *.npy
+# Ignore generated audio feature matrices
+emotion2vec_embeddings/
+documents(private)/

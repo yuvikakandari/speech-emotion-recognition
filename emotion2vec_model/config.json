@@ -1,0 +1,1 @@
+{"model_type": "wav2vec2", "architectures": ["Wav2Vec2ForAudioClassification"], "hidden_size": 768, "num_hidden_layers": 12, "num_attention_heads": 12, "intermediate_size": 3072, "classifier_proj_size": 256, "vocab_size": 32, "final_dropout": 0.1, "mask_time_prob": 0.05, "torch_dtype": "float32"}

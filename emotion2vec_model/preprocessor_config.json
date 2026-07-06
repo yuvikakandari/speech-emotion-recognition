@@ -1,0 +1,1 @@
+{"feature_size": 1, "sampling_rate": 16000, "padding_value": 0.0, "do_normalize": true, "return_attention_mask": false, "processor_class": "Wav2Vec2Processor"}
