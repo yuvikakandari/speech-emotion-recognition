@@ -1,7 +1,7 @@
 Markdown
-# Speech Emotion Recognition — Advanced Self-Supervised Foundation System
+# Speech Emotion Recognition - Advanced Self-Supervised Foundation System
 
-An evolutionary, production-grade Speech Emotion Recognition (SER) framework tracking breakthroughs from handcrafted multi-branch hybrid deep learning streams to an enterprise-grade Self-Supervised Learning (SSL) foundation transformer system.
+A Speech Emotion Recognition (SER) framework tracking breakthroughs from handcrafted multi-branch hybrid deep learning streams to an enterprise-grade Self-Supervised Learning (SSL) foundation transformer system.
 
 ## Table of Contents
 
